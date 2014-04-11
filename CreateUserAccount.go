@@ -42,6 +42,7 @@ type User struct {
 	Email     string
 	UserName  string
 	Password  string
+	UserID    int
 }
 
 type Page struct {
@@ -112,7 +113,7 @@ func main() {
 	//http.HandleFunc("/createuser", userhandler)
 	//http.ListenAndServe(":8080", nil)
 
-	u := User{"Rob", "Gosnell", "gosnellrd@gmail.com", "RobDaMan", "12344321"}
+	u := User{"Rob", "Gosnell", "gosnellrd@gmail.com", "RobDaMan", "12344321", "0001"}
 	v, err := json.Marshal(u)
 	if err != nil {
 		fmt.Println("error:", err)
